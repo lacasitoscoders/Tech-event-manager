@@ -1,6 +1,18 @@
 # Tech-event-manager
 
-Contexto del proyecto
+# Installation
+
+git clone 
+
+laravel UI: composer require laravel/ui
+
+npm install -g sass
+
+npm install && npm run dev
+
+php artisan ui bootstrap --auth
+
+# Contexto del proyecto
 Un colectivo de desarrollo de software quiere crear una aplicación web para gestionar sus eventos online como talleres, masterclass o webinars.
 
 Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse. Podrán ver la lista de los eventos a los que se han apuntado. El administrador debe tener las herramientas para la gestión (CRUD) de los eventos.
