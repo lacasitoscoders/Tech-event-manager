@@ -4,13 +4,24 @@
 
 git clone https://github.com/lacasitoscoders/Tech-event-manager.git
 
-laravel UI: composer require laravel/ui
+composer require laravel/ui
 
 npm install -g sass
 
+php artisan ui bootstrap --auth
+
 npm install && npm run dev
 
-php artisan ui bootstrap --auth
+## crear .env (copia y pega del .env.example)
+## generar clave punto env
+php artisan key:generate
+
+## descomentar lineas 24 y 25 del archivo phpunit.xml
+## Para iniciar el servidor de desarrollo de Laravel:
+
+$ php artisan serve
+## cerrar servidor 
+control C
 
 # Contexto del proyecto
 Un colectivo de desarrollo de software quiere crear una aplicación web para gestionar sus eventos online como talleres, masterclass o webinars.
