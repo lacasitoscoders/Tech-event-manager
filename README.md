@@ -2,7 +2,7 @@
 
 # Installation
 
-git clone 
+git clone https://github.com/lacasitoscoders/Tech-event-manager.git
 
 laravel UI: composer require laravel/ui
 
