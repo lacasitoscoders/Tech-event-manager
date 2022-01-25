@@ -17,13 +17,9 @@ class CreateRolsTable extends Migration
     
             $table->id();
             $table->timestamps();
-            $table->boolean("permission")->default(0);
+            $table->boolean("guest")->default(1);
+            $table->boolean("admin")->default(0);
 
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('event_id');
-
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('event_id')->references('id')->on('events');
         });
     }
 
