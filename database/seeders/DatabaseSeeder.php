@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use APP\Models\Event;
 
-class DatabaseSeeder extends Seeder
+class EventSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -13,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Event::factory()->count(5)->create();
     }
 }

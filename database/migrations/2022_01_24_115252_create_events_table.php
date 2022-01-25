@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('tittle');
             $table->boolean('available')->default(1);
             $table->string('description');
-            $table->integer('assistant');
+            $table->integer('assistants');
             $table->datetime('date');
             $table->string('img');
 
