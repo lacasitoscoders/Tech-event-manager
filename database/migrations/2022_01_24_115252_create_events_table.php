@@ -19,13 +19,12 @@ class CreateEventsTable extends Migration
             $table->string('tittle');
             $table->boolean('available')->default(1);
             $table->string('description');
-            $table->number('assistant');
+            $table->integer('assistant');
             $table->datetime('date');
-            $table->image('img');
+            $table->string('img');
 
             $table->unsignedBigInteger('user_id');
             
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }   
 
