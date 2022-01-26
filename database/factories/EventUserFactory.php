@@ -14,7 +14,10 @@ class EventUserFactory extends Factory
     public function definition()
     {
         return [
-            //
+            
+            'event_id'=>rand(1,5),
+            'user_id'=>rand(1,5),
+            
         ];
     }
 }

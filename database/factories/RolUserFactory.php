@@ -14,7 +14,8 @@ class RolUserFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'rol_id'=>rand(1,5),
+            'user_id'=>rand(1,5),
         ];
     }
 }
