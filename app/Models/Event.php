@@ -17,4 +17,10 @@ class Event extends Model
         'date',
         'img'
     ];
+
+    public function users(){
+
+        return $this->belongsToMany(User::class, 'event_user');
+    }
+
 }

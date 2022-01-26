@@ -13,4 +13,9 @@ class Rol extends Model
         'guest',
         'admin',
     ];
+
+    public function users(){
+
+        return $this->belongsToMany(User::class, 'rol_user');
+    }
 }
