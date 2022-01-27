@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
             $table->datetime('date');
             $table->string('img');
 
-            $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('user_id');
             
         });
     }   
