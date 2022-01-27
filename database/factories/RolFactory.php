@@ -14,9 +14,7 @@ class RolFactory extends Factory
     public function definition()
     {
         return [
-            
-            'guest'=>rand(0,1),
-            'admin'=>rand(0,1),
+            'name'
         ];
     }
 }

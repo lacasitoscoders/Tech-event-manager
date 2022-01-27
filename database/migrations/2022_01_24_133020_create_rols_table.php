@@ -17,8 +17,7 @@ class CreateRolsTable extends Migration
     
             $table->id();
             $table->timestamps();
-            $table->boolean("guest")->default(1);
-            $table->boolean("admin")->default(0);
+            $table->string("name");
 
         });
     }

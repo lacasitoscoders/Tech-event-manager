@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEventUsersTable extends Migration
+class CreateRolUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateEventUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_users', function (Blueprint $table) {
+        Schema::create('rol_users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
-            $table->unsignedBigInteger('event_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('rol_id')->default(1);
 
-            $table->foreign('event_id')->references('id')->on('events');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('rol_id')->references('id')->on('rols');
+
         });
     }
 
@@ -32,6 +33,6 @@ class CreateEventUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_users');
+        Schema::dropIfExists('rol_users');
     }
 }
