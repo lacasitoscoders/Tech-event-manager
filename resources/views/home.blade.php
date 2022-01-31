@@ -5,6 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <div>
+                    <h1 class="primary">Esto es la página de usuario logeado</h1>
+                </div>
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
