@@ -1,6 +1,6 @@
 @extends('layouts.web')
-@include('layouts.slider')
 
+<x-slider/>
 @section('content')
     <div>
         
