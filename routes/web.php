@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,8 +17,20 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
-Route::view('/', 'index');
+Route::get('/', function() { 
+    return view('index');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
-Route::get('/magic', [App\Http\Controllers\MagicController::class, 'index'])->name('magic');
+
+Route::name('events')->group(function(){
+    Route::get('/events', [EventController::class, 'index'])->name('.list');
+    Route::get('/events/create', [EventController::class, 'create'])->name('.create');
+    Route::get('/events/{id}', [EventController::class, 'show'])->name('.show');
+    Route::post('/events', [EventController::class, 'store'])->name('.store');
+    Route::put('events/{id}', [EventController::class, 'update'])->name('.update'); 
+    Route::delete('/events/{id}', [EventController::class, 'destroy'])->name('.destroy');
+});
+
+
