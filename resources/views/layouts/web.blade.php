@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('scss/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">  
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <x-header/>
+    </header>
     <main>
         <div>
             @yield('content')
         </div>
     </main>
+
+    <footer>
+        <x-footer/>
+    </footer>
 </body>
 </html>
