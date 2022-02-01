@@ -1,16 +1,23 @@
 <div>
-    <nav class="navbar navbar-light bg-white">
+    <nav class="navbar navbar-light bg-white ">
         <div class="container-fluid">
-          <a class="navbar-brand techvents" href="{{ route('home') }}">
-            <img src="{{asset('images/img/logo.png')}}" alt="" width="38" height="38" class="d-inline-block align-text-center">
+          <a class="navbar techvents text-decoration-none" href="{{ url('/') }}">
+            <img src="{{asset('images/img/logo.png')}}" alt="" width="38" height="38" class="d-inline-block align-text-center techvents">
             TECHVENTS
           </a>
             <div>
             @auth 
-           
-           hola 
-                
-            
+                <div class="dropdown">
+                 {{ Auth::user()->name }}
+                 <button class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img src="{{asset('images/img/boton-usuario.png')}}">
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="{{url('dashboard')}}">Mis eventos</a></li>
+                  <li><a class="dropdown-item" href="{{route  ('logout')}}">Cerrar sesión</a></li>
+                </ul>
+                </div>
             @else     
                 <a href="{{ url('login') }}" class="text-dark text-decoration-none" >
                 Login
@@ -20,6 +27,7 @@
                 @endif 
             </div> 
         </div>
-      </nav>    
+      </nav>  
+      <hr class="mt-0">    
 
 </div>  
