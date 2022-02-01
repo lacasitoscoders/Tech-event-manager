@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -23,7 +24,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return View ('index', ['events' => $events]);
+            
     }
 
     /**
@@ -33,7 +36,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -44,7 +47,14 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $events = new Event();
+        $events-> title = $request -> title; 
+        $events-> description = $request -> description; 
+        $events-> assistants = $request -> assistants; 
+        $events-> date = $request -> date; 
+        $events-> img = $request -> img; 
+
+        $events->save();
     }
 
     /**
@@ -55,7 +65,10 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+        $events = Event::find($id);
+
+        // show the view and pass the events$events to it
+        return View('home', ['events' => $events]);
     }
 
     /**
