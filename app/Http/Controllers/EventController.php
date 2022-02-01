@@ -36,7 +36,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        
+        return View('home');   
     }
 
     /**
@@ -72,17 +72,6 @@ class EventController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -91,7 +80,16 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $events = Event::find($id);
+        $events-> title = $request -> title; 
+        $events-> description = $request -> description; 
+        $events-> assistants = $request -> assistants; 
+        $events-> date = $request -> date; 
+        $events-> img = $request -> img; 
+
+        $events->save();
+
+        return view('home', ["message"=>"Updated", "events"=> $events], 200);
     }
 
     /**
@@ -100,8 +98,10 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $events = Event::destroy($id);
+        return view('home');
     }
+    
 }

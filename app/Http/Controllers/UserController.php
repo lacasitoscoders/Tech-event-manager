@@ -21,8 +21,17 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function unsubscribed()
+    public function subscribe($id = null)
     {
-        //
+
+        $this->suscriptions()->create(['user_id'=>$id ?:auth()->id()]);
+
+        return view('home',);//Pendiente
     }   
+
+    public function unsuscribe($id = null)
+    {
+        $this->suscriptions()->where('user_id', $id ?: auth()->id())->delete();
+    }
+
 }
