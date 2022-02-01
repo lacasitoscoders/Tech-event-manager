@@ -17,8 +17,11 @@ npm install && npm run dev
 php artisan key:generate
 
 ## descomentar lineas 24 y 25 del archivo phpunit.xml
-## Para iniciar el servidor de desarrollo de Laravel:
 
+npm run watch
+## para levantar el watch y que empiece a leer el sass. La carpeta public no se toca, se editan archivos en resouces
+
+## Para iniciar el servidor de desarrollo de Laravel:
 $ php artisan serve
 ## cerrar servidor 
 control C
