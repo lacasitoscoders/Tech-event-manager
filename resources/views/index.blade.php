@@ -16,6 +16,7 @@
     <body>
         @section('content') 
             <div>
+                <h1 class="primary">Ruta view index)</h1>
                 <livewire:event-list /> 
                 {{-- <x-event_list/> --}}
             </div>

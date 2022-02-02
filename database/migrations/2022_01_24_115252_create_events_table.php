@@ -18,12 +18,10 @@ class CreateEventsTable extends Migration
             $table->timestamps();   
             $table->string('title');
             $table->boolean('available')->default(1);
-            $table->string('description');
+            $table->text('description', 255);
             $table->integer('assistants');
             $table->datetime('date');
             $table->string('img');
-
-            // $table->unsignedBigInteger('user_id');
             
         });
     }   
