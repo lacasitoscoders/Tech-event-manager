@@ -10,8 +10,7 @@ class Rol extends Model
     use HasFactory;
 
     protected $fillable = [
-        'guest',
-        'admin',
+        'name',
     ];
 
     public function users(){
