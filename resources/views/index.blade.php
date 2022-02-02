@@ -8,15 +8,19 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Techvents landing page</title>
+        @livewireStyles
     </head>
 
     {{-- ESTO ES LA LANDING PAGE --}}
 
     <body>
-        @section('content')
+        @section('content') 
             <div>
-                <x-event_list/>
+                <livewire:event-list /> 
+                {{-- <x-event_list/> --}}
             </div>
         @endsection
+
+        @livewireStyles
     </body>
 </html>
