@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()->count(5)->create();
         Event::factory()->count(5)->create();
-        // Rol::factory()->count(5)->create();
+       
     }
 }

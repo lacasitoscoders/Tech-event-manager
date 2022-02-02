@@ -22,8 +22,6 @@ class CreateEventsTable extends Migration
             $table->integer('assistants');
             $table->datetime('date');
             $table->string('img');
-
-            // $table->unsignedBigInteger('user_id');
             
         });
     }   
