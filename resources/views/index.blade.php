@@ -16,7 +16,7 @@
     <body>
         @section('content') 
             <div>
-                
+                <x-slider/>
                 <livewire:event-list /> 
                 
             </div>

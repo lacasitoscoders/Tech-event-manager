@@ -15,14 +15,14 @@
         <x-header/>
     </header>
     <main>
-      <x-slider/>
+      
         <div>
             @yield('content')
         </div>
     </main>
 
-    {{-- <nav aria-label="">
-        <ul class="pagination d-flex justify-content-center">
+    <nav aria-label="">
+        <ul class="pagination d-flex justify-content-center">                                         
           <li class="page-item ">
             <a class="page-link text-dark" href="#" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
@@ -37,7 +37,7 @@
             </a>
           </li>
         </ul>
-      </nav> --}}
+      </nav>
 
       {{-- <livewire:event-list />  --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
