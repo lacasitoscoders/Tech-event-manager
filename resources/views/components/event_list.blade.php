@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -18,12 +18,12 @@
     <div class="events_list_header">
 
           {{-- titulo sección de enventos --}}
-      <div>
+      {{-- <div>
           <h2 class="section_name">Próximos eventos</h2>
       </div>
 
           {{-- botónn filtrar --}}
-      <div class="dropdown">
+      {{-- <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle btn_filter" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Filtrar
           </button>
@@ -32,10 +32,10 @@
               <li><a class="dropdown-item" href="#">Pasados</a></li>
           </ul>
       </div>
-    </div>
+    </div> --}}
 
           {{-- contenedor de cards --}}
-      <div class="card-group">
+      {{-- <div class="card-group">
         <div class="card rounded-2">
           <img src="{{asset('assets/img/logo.png')}}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -89,10 +89,10 @@
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-      </div>
+      </div> --}}
 
           {{-- paginador --}}
-      <nav aria-label="Page navigation example">
+      {{-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center mt-3">
           <li class="page-item disabled">
             <a class="page-link">Anterior</a>
@@ -107,5 +107,5 @@
           </li>
         </ul>
       </nav>
-  </section>
-</body>
+  </section> --}}
+{{-- </body> --}} 

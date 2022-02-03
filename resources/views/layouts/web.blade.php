@@ -21,7 +21,7 @@
         </div>
     </main>
 
-    <nav aria-label="">
+    {{-- <nav aria-label="">
         <ul class="pagination d-flex justify-content-center">
           <li class="page-item ">
             <a class="page-link text-dark" href="#" aria-label="Previous">
@@ -37,7 +37,9 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> --}}
+
+      {{-- <livewire:event-list />  --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{asset('js/modallogin.js')}}"></script>
 </body>
