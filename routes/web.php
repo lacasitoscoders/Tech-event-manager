@@ -23,12 +23,6 @@ Route::get('/', function() {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< HEAD
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::name('events')->group(function(){
@@ -44,4 +38,3 @@ Route::name('events')->group(function(){
 Route::post('/users/{id}', [UserController::class, 'store'])->name('.store');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
 
->>>>>>> develop
