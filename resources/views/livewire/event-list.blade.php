@@ -45,10 +45,10 @@
     </div>
 
     @endforeach
-
+    
   </div>
 
-
+  {{ $events->links('pagination::Bootstrap-4') }}
 
 
    
