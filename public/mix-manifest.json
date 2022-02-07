@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
+<<<<<<< HEAD
     "/css/app.css": "/css/app.css"
+=======
+    "/scss/app.css": "/scss/app.css"
+>>>>>>> develop
 }

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +17,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+Route::get('/', function() { 
+    return view('index');
 });
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+<<<<<<< HEAD
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
-Auth::routes();
+Route::name('events')->group(function(){
+    Route::get('/events', [EventController::class, 'index'])->name('.list');
+    Route::get('/events/create', [EventController::class, 'create'])->name('.create');
+    Route::get('/events/{id}', [EventController::class, 'show'])->name('.show');
+    Route::post('/events', [EventController::class, 'store'])->name('.store');
+    Route::put('events/{id}', [EventController::class, 'update'])->name('.update'); 
+    Route::delete('/events/{id}', [EventController::class, 'destroy'])->name('.destroy');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/users/{id}', [UserController::class, 'store'])->name('.store');
+Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
+
+>>>>>>> develop

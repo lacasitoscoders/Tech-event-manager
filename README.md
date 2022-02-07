@@ -17,13 +17,25 @@ npm install && npm run dev
 php artisan key:generate
 
 ## descomentar lineas 24 y 25 del archivo phpunit.xml
+<<<<<<< HEAD
 ## Para iniciar el servidor de desarrollo de Laravel:
 
+=======
+
+npm run watch
+## para levantar el watch y que empiece a leer el sass. La carpeta public no se toca, se editan archivos en resouces
+
+## Para iniciar el servidor de desarrollo de Laravel:
+>>>>>>> develop
 $ php artisan serve
 ## cerrar servidor 
 control C
 
+<<<<<<< HEAD
 # Contexto del proyecto
+=======
+Contexto del proyecto
+>>>>>>> develop
 Un colectivo de desarrollo de software quiere crear una aplicación web para gestionar sus eventos online como talleres, masterclass o webinars.
 
 Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse. Podrán ver la lista de los eventos a los que se han apuntado. El administrador debe tener las herramientas para la gestión (CRUD) de los eventos.
