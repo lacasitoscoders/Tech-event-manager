@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div>
                     <h1 class="primary">Esto es la página de usuario logeado</h1>
                 </div>
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Bienvenido/a la página de logeado') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,3 +24,16 @@
     </div>
 </div>
 @endsection
+
+<body>
+    @section('content') 
+        <div>
+            <x-slider/>
+            <livewire:event-list /> 
+            
+        </div>
+    @endsection
+
+    @livewireStyles
+</body>
+</html>

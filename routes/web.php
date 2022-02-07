@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/', function() {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 Route::name('events')->group(function(){
     Route::get('/events', [EventController::class, 'index'])->name('.list');
@@ -37,4 +38,3 @@ Route::name('events')->group(function(){
 
 Route::post('/users/{id}', [UserController::class, 'store'])->name('.store');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
-
