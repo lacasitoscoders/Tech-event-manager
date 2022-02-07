@@ -2,12 +2,17 @@
 
 namespace App\Http\Livewire;
 
+use Livewire\WithPagination;
+use App\Models\Event;
 use Livewire\Component;
 
 class EventList extends Component
 {
+    use WithPagination;
+
     public function render()
     {
-        return view('livewire.event-list');
+        $events = Event::orderBy('date')->paginate(10);
+        return view('livewire.event-list', compact('events'));
     }
 }
