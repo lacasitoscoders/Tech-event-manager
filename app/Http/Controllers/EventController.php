@@ -36,7 +36,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return View('home');   
+        return View('events.create');   
     }
 
     /**
@@ -101,7 +101,7 @@ class EventController extends Controller
     public function destroy(Request $request, $id)
     {
         $events = Event::destroy($id);
-        return view('home');
+        return view('');
     }
     
 }
