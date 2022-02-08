@@ -20,8 +20,8 @@ use App\Http\Controllers\DashboardController;
 
 Auth::routes();
 Route::get('/', function() { return view('index');});
-Route::get('/actuales', function() { return view('actuales');});
-Route::get('/pasados', function() { return view('pasados');});
+Route::get('/current', function() { return view('current');});
+Route::get('/past', function() { return view('past');});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
