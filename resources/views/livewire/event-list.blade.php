@@ -37,10 +37,10 @@
       </p>
       <div class="collapse" id="collapseExample">
         <div class="card card-body">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text">{{ $event->description }}</p>
         </div>
       </div>
-        <p class="card-text"><small class="text-muted">"{{ $event->description}}"</small></p>
+        <p class="card-text"><small class="text-muted">"OMAR I"</small></p>
       </div>
     </div>
 
