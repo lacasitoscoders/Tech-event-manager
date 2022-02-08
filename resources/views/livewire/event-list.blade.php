@@ -22,7 +22,6 @@
   </div>
 
 
-
   <div class="card-group " >
     @foreach($events as $event)
 
@@ -40,11 +39,12 @@
           <p class="card-text">{{ $event->description }}</p>
         </div>
       </div>
-        <p class="card-text"><small class="text-muted">"OMAR I"</small></p>
+        <p class="card-text"><small class="text-muted">{{$event->assistants}}</small></p>
       </div>
       <div>
         <button type="button" class="btn btn-danger" wire:click='destroy({{ $event->id }})'>Borrar</button>
-        <button type="button" class="btn btn-danger">Editar</button>
+        
+        <a href="{{route('events.edit', $event)}}"><button type="button" class="btn btn-danger">Editar</button></a>
 
       </div>
     
@@ -56,8 +56,7 @@
 
   {{ $events->links('pagination::Bootstrap-4') }}
 
-
-   
+  
 
 
 </div>
