@@ -42,6 +42,12 @@
       </div>
         <p class="card-text"><small class="text-muted">"OMAR I"</small></p>
       </div>
+      <div>
+        <button type="button" class="btn btn-danger" wire:click='destroy({{ $event->id }})'>Borrar</button>
+        <button type="button" class="btn btn-danger">Editar</button>
+
+      </div>
+    
     </div>
 
     @endforeach
