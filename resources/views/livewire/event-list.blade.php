@@ -15,8 +15,8 @@
           Filtrar
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Actuales</a></li>
-            <li><a class="dropdown-item" href="#">Pasados</a></li>
+            <li><a class="dropdown-item" href="{{ url('Actuales') }}">Actuales</a></li>
+            <li><a class="dropdown-item" href="{{ url('Pasados') }}">Pasados</a></li>
         </ul>
     </div>
   </div>
