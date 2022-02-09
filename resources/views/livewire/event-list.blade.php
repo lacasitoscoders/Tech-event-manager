@@ -40,9 +40,15 @@
         </div>
       </div>
         <p class="card-text"><small class="text-muted">{{$event->assistants}}</small></p>
-      </div>
+        <p class="card-text"><small class="text-muted">{{$event->date}}</small></p>
+
+      </div>  
       <div>
-        <button type="button" class="btn btn-danger" wire:click='destroy({{ $event->id }})'>Borrar</button>
+        <form action="{{ route('events.destroy', $event->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
         
         <a href="{{route('events.edit', $event)}}"><button type="button" class="btn btn-danger">Editar</button></a>
 

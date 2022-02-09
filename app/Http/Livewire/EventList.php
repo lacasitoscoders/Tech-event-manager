@@ -12,7 +12,7 @@ class EventList extends Component
 
     public function render()
     {
-        $events = Event::orderBy('id', 'desc')->paginate(10);
+        $events = Event::orderBy('date', 'desc')->paginate(10);
         return view('livewire.event-list', compact('events'));
     }
 }

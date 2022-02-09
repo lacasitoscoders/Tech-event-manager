@@ -26,7 +26,13 @@
                     <button type="submit" class="btn btn-primary" value="Add">Editar</button>
                 </div>
             </div>  
-        </form>      
+        </form>   
+        
+        <form action="{{ route('events.destroy', $events->id)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
         <div class="d-grid mt-3 gap-2 d-md-block">
             <a href="{{route('home')}}"><button class="btn btn-secondary">Cancelar</button></a> 
         </div>  
