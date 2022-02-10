@@ -13,7 +13,7 @@ class AvailableEvent extends Component
 
     public function render()
     {
-        $events = Event::orderBy('available')->paginate(5);
+        $events = Event::orderBy('date','asc')->where('available', '1')->paginate(5);
         return view('livewire.available-event', compact('events'));
     }
 }
