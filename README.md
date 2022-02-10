@@ -59,6 +59,3 @@ Sketch - mockup
 Url en ‘deploy’.
 Presentación en diapositivas
 Demo y code review
-
-
-//esta línea es borrable//
