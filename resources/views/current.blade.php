@@ -3,8 +3,8 @@
     <h1> eventos actuales </h1>
     @section('content') 
     <div>
-        <x-slider/>
-        <livewire:event-list /> 
+        {{-- <x-slider/> --}}
+        <livewire:available-event /> 
         
     </div>
 @endsection
