@@ -27,11 +27,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 Route::name('events')->group(function(){
-    Route::get('/events', [EventController::class, 'index'])->name('.list');
+    Route::get('/events', [EventController::class, 'index'])->name('.index');
     Route::get('/events/create', [EventController::class, 'create'])->name('.create');
     Route::get('/events/{id}', [EventController::class, 'show'])->name('.show');
     Route::post('/events', [EventController::class, 'store'])->name('.store');
     Route::put('events/{id}', [EventController::class, 'update'])->name('.update'); 
+    Route::get('events/{id}/edit', [EventController::class, 'edit'])->name('.edit');
     Route::delete('/events/{id}', [EventController::class, 'destroy'])->name('.destroy');
 });
 

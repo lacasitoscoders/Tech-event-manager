@@ -25,7 +25,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return View ('index', ['events' => $events]);
+        return view ('index', ['events' => $events]);
             
     }
 
@@ -35,8 +35,9 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return View('home');   
+    {   
+        $events = Event::orderBy('id', 'desc');
+        return view('events.create', ['events' => $events]);   
     }
 
     /**
@@ -55,6 +56,9 @@ class EventController extends Controller
         $events-> img = $request -> img; 
 
         $events->save();
+
+        return redirect('home');
+
     }
 
     /**
@@ -89,19 +93,27 @@ class EventController extends Controller
 
         $events->save();
 
-        return view('home', ["message"=>"Updated", "events"=> $events], 200);
+        return redirect('home');
     }
 
+    public function edit($id)
+    {
+        $events = Event::find($id);
+
+        return view('events.edit', ['events'=> $events]);
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy( $id)
     {
-        $events = Event::destroy($id);
-        return view('home');
+        $events = Event::findOrFail($id);
+        $events->delete();
+        
+        return redirect('/home'); 
     }
     
 }
