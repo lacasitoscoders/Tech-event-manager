@@ -12,7 +12,7 @@ class PastEvent extends Component
 
     public function render()
     {
-        $events = Event::orderBy('date','asc')->where('available', '0')->paginate(5);
+        $events = Event::orderBy('date','asc')->where('available', '0')->paginate(10);
         return view('livewire.past-event', compact('events'));
     }
 }
