@@ -51,6 +51,7 @@
         </form>
         
         <a href="{{route('events.edit', $event)}}"><button type="button" class="btn btn-danger">Editar</button></a>
+        <a href="{{route('users.store', $event)}}"><button type="button" class="btn btn-warning">suscribe</button></a>
 
       </div>
     

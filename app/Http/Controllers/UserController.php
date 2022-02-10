@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Event;
+use App\Models\EventUser;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -21,13 +22,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function subscribe($id = null)
+    // public function subscribe($id = null)
+    // {
+
+    //     $this->suscriptions()->create(['user_id'=>$id ?:auth()->id()]);
+
+    //     return view('home',);//Pendiente
+    // }   
+
+    public function store($userId, EventUser $event)
     {
-
-        $this->suscriptions()->create(['user_id'=>$id ?:auth()->id()]);
-
-        return view('home',);//Pendiente
-    }   
+        $event->subscribe();
+    }
 
     public function unsuscribe($id = null)
     {
@@ -35,3 +41,4 @@ class UserController extends Controller
     }
 
 }
+

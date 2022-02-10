@@ -37,5 +37,7 @@ Route::name('events')->group(function(){
 });
 
 
-Route::post('/users/{id}', [UserController::class, 'store'])->name('.store');
+Route::post('/events/{id}/{title}/subscriptions', [UserController::class, 'store'])->name('.store');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
+
+
