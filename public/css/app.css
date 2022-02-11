@@ -6,7 +6,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Montserrat:wght@200;500;600700&display=swap);
-
 .color4 {
     background-color: #6BB6AB
 }
@@ -33,6 +32,7 @@ hr {
  */
 
 .events_list_header{
+  
   margin-top: 5%;
   margin-bottom: 5%;
   display: flex;
