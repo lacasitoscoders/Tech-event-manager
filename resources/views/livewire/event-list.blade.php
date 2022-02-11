@@ -41,9 +41,17 @@
       </div>
         <p class="card-text"><small class="text-muted">{{$event->assistants}}</small></p>
         <p class="card-text"><small class="text-muted">{{$event->date}}</small></p>
-
+      
       </div>  
+
       <div>
+        <form action="{{route('subscribe', $event->id)}}" method="get">
+          @csrf
+        <input type="hidden" name="event_id" value="{{$event['id']}}">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>      
+      <div>        
         <form action="{{ route('events.destroy', $event->id)}}" method="post">
           @csrf
           @method('DELETE')
