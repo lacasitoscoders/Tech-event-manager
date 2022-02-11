@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+/* -- STYLESHEETS -- */
+@import url(./custom.css);
+@import url(./event_list.css);
+@import url(./modallogin.css);
+ 
+/* -- FONTS -- */
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
@@ -12,6 +18,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Montserrat:wght@200;500;600700&display=swap');
 
+/* -- COLORS -- */
 .color_red{
     color: #DC574F;
 }
