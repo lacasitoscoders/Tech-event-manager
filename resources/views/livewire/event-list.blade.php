@@ -1,7 +1,5 @@
 <div class="mx-3 row">
-    <h1 class=color4>Probando livewere</h1>
-
-
+    
     <div class="events_list_header">
 
         {{-- titulo sección de enventos --}}
@@ -22,16 +20,16 @@
   </div>
 
 
-  <div class="card-group " >
+  <div class="card-group col-sm-4 >
     @foreach($events as $event)
 
-    <div class="card rounded ">
+    <div class="card rounded  col-sm-4">
       <img src="{{ $event->img }}" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">"{{ $event->title }}"</h5>
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          About 
+        <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          
         </button>
       </p>
       <div class="collapse" id="collapseExample">
@@ -43,6 +41,7 @@
         <p class="card-text"><small class="text-muted">{{$event->date}}</small></p>
 
       </div>  
+      @auth
       <div>
         <form action="{{ route('events.destroy', $event->id)}}" method="post">
           @csrf
@@ -53,6 +52,7 @@
         <a href="{{route('events.edit', $event)}}"><button type="button" class="btn btn-danger">Editar</button></a>
 
       </div>
+      @endif
     
     </div>
 
