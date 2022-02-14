@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Models\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,4 @@ Route::name('events')->group(function(){
 });
 
 
-Route::post('/users/{id}', [UserController::class, 'store'])->name('.store');
-Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
+Route::get('events/{id}/suscribe', [UserController::class, 'subscribe'])->name('subscribe');
