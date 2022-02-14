@@ -41,6 +41,9 @@
         <p class="card-text"><small class="text-muted">{{$event->date}}</small></p>
       
       </div>  
+      @auth
+        
+      
       <div>
         <form action="{{route('subscribe', $event->id)}}" method="get">
           @csrf
@@ -58,7 +61,7 @@
         <a href="{{route('events.edit', $event)}}"><button type="button" class="btn btn-danger">Editar</button></a>
 
       </div>
-      @endif
+      @endauth
     
     </div>
 
