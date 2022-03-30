@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+/* -- STYLESHEETS -- */
+@import url(./custom.css);
+@import url(./event_list.css);
+@import url(./modallogin.css);
+ 
+/* -- FONTS -- */
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
@@ -12,12 +18,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Montserrat:wght@200;500;600700&display=swap');
 
+/* -- COLORS -- */
 .color_red{
     color: #DC574F;
 }
 
-.color_yellow{
-    color: #EEB43C;
+.bg-yellow{
+    background-color: #EEB43C;
 }
 
 .color_yellow_90{
@@ -33,3 +40,13 @@
     color: #6BB6AB;
     opacity: 85%;
 }
+
+/*
+grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);*/

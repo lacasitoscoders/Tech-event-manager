@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
+use App\Models\User;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,22 +20,14 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function subscribe($id = null)
-    {
+    public function subscribe($id) {
 
-        $this->suscriptions()->create(['user_id'=>$id ?:auth()->id()]);
+        $user = Auth::user();
+        $user->events()->attach($id);
 
-        return view('home',);//Pendiente
-    }   
-
-    public function unsuscribe($id = null)
-    {
-        $this->suscriptions()->where('user_id', $id ?: auth()->id())->delete();
+        return view('dashboard');
     }
 
+
+        
 }
